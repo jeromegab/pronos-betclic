@@ -1,12 +1,16 @@
 #include <QCoreApplication>
 #include <QDebug>
+#include <QtGlobal>
 
+#include "betclicapi.h"
+#include "betsfiller.h"
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QCoreApplication app(argc, argv);
 
-    qDebug() << "lala";
+    BetsFiller betsFiller(argv);
+    betsFiller.fillSheet();
 
     return 0;
 }
